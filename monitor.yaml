@@ -1,13 +1,13 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: devops-monitor
+  name: prodev-monitor
   labels:
     release: monitoring
 spec:
   selector:
     matchLabels:
-      app: devops-project
+      app: prodev-project
   endpoints:
     - port: http
       path: /metrics

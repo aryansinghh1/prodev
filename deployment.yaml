@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-project
+  name: prodev-project
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: devops-project
+      app: prodev-project
   template:
     metadata:
       labels:
-        app: devops-project
+        app: prodev-project
     spec:
       containers:
-      - name: devops-project
+      - name: prodev-project
         image: aryansinghh1/devops-project:1
         imagePullPolicy: Always
         ports:

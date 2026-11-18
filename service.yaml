@@ -1,17 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: devops-project-service
+  name: prodev-project-service
   labels:
-    app: devops-project
+    app: prodev-project
 spec:
   type: NodePort
   selector:
-    app: devops-project
+    app: prodev-project
   ports:
     - name: http
       protocol: TCP
       port: 80
       targetPort: 3000
       nodePort: 30007
-      
