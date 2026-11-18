@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: prodev-project-monitor
+  labels:
+    release: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: prodev-project
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
